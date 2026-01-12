@@ -4,17 +4,27 @@
     box-sizing: border-box;
 }
 
+:root{
+    --first: #0d0d12;
+    --second: #14145E;
+    --third: #290E4F;
+    --one:#eb5f13;
+    --two:#eb5f13;
+    --three:#422311;
+
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+    background:var(--first);
 }
 
 /* Header */
 header {
-    background: #2c5f2d;
+    background: var(--first);
     color: white;
     padding: 1rem;
     position: fixed;
@@ -22,7 +32,7 @@ header {
     top: 0;
     z-index: 100;
     transition: all 0.4s ease;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0px 1px white;
 }
 
 nav {
@@ -40,8 +50,8 @@ nav {
 }
 
 .logo:hover {
-    transform: scale(1.1);
-    color: #90EE90;
+    transform: scaleX(1.1);
+    color: #ffffff;
 }
 
 .nav-links {
@@ -73,8 +83,8 @@ nav {
 
 /* Hero */
 .hero {
-    background: linear-gradient(rgba(44,95,45,0.9), rgba(74,124,89,0.9)),
-                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+    background: linear-gradient(135deg,var(--first),var(--second),var(--third));
+    box-shadow: 0 0 1px white;         
     height: 90vh;
     display: flex;
     align-items: center;
@@ -105,20 +115,19 @@ nav {
 /* Buttons */
 .btn {
     display: inline-block;
-    background: #28a745;
+    background: linear-gradient(135deg,var(--one),var(--two));
     color: white;
     padding: 15px 30px;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 12px;
     font-weight: bold;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+    box-shadow: none;
 }
 
 .btn:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(40,167,69,0.5);
-    background: #218838;
+    background: #c14705;
 }
 
 /* Sections */
@@ -139,7 +148,7 @@ section:hover {
 }
 
 h2 {
-    color: #2c5f2d;
+    color: var(--first);
     margin-bottom: 2rem;
     text-align: center;
     transition: all 0.3s ease;
@@ -147,7 +156,7 @@ h2 {
 }
 
 h2:hover {
-    color: #28a745;
+    color: black;
     transform: scale(1.05);
 }
 
@@ -160,7 +169,7 @@ h2:hover {
 
 .card {
     padding: 2rem;
-    border-left: 5px solid #28a745;
+    border-left: 5px solid #EB3B13;
     background: #f8f9fa;
     border-radius: 10px;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -168,7 +177,7 @@ h2:hover {
 
 .card:hover {
     transform: translateY(-10px) rotate(1deg) scale(1.02);
-    box-shadow: 0 20px 40px rgba(40,167,69,0.2);
+    box-shadow: 0 20px 40px ;
     border-left-width: 8px;
     background: white;
 }
@@ -179,7 +188,7 @@ h2:hover {
 }
 
 .card:hover h3 {
-    color: #28a745;
+    color: #0d0d12;
     transform: scale(1.1);
 }
 
@@ -193,21 +202,21 @@ h2:hover {
 
 .stat {
     padding: 1.5rem;
-    background: #e8f5e8;
+    background: rgb(248, 248, 248);
     border-radius: 12px;
     transition: all 0.4s ease;
 }
 
 .stat:hover {
     transform: translateY(-8px) scale(1.1);
-    background: linear-gradient(45deg, #28a745, #20c997);
+    background: linear-gradient(135deg,var(--first),var(--second),var(--third));
     color: white;
-    box-shadow: 0 15px 30px rgba(40,167,69,0.4);
+    box-shadow: 0 15px 30px var(--first);
 }
 
 .stat-number {
     font-size: 2.5rem;
-    color: #28a745;
+    color: linear-gradient(135deg, #1e3c72, #2a5298, #1a4a2e);;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -240,7 +249,7 @@ input, select {
 }
 
 input:focus, select:focus {
-    border-color: #28a745;
+    border-color: #0d0d12;
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 10px 25px rgba(40,167,69,0.2);
     outline: none;
@@ -248,7 +257,7 @@ input:focus, select:focus {
 
 /* Footer */
 footer {
-    background: #2c5f2d;
+    background: var(--first);
     color: white;
     text-align: center;
     padding: 2rem;
@@ -256,7 +265,7 @@ footer {
 }
 
 footer:hover {
-    background: #1a3d1f;
+    background: var(--second);
     transform: scale(1.01);
 }
 
@@ -265,3 +274,10 @@ footer:hover {
     .hero h1 { font-size: 2rem; }
 }
 
+label{
+    color:var(--first);
+}
+
+#impact,.stats-grid,.stat{
+    box-shadow: none;
+}
