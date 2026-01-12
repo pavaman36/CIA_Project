@@ -83,7 +83,7 @@ body{
 
 .legend-item:hover {
     transform: translateX(10px);
-    background: #e8f5e8;
+    background: lightblue;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
