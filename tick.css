@@ -1,0 +1,198 @@
+/* Daily Eco Checklist Styles */
+.checklist-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+}
+
+.checklist-container header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.checklist-container h1 {
+    font-size: 2.5rem;
+    color: #2c5f2d;
+    margin-bottom: 0.5rem;
+}
+
+.checklist-container header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Progress Section */
+.progress-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border: 6px solid #e8f5e8;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+}
+
+.progress-circle:hover {
+    transform: scale(1.05);
+    border-color: #28a745;
+}
+
+#progress-count {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c5f2d;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e8f5e8;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 0 15px rgba(40,167,69,0.4);
+}
+
+#hero-status {
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+/* Checklist */
+.checklist {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.check-item:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.check-item input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 3px solid #e8f5e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.check-item input:checked + .checkmark {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    border-color: #28a745;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(40,167,69,0.4);
+}
+
+.task-text {
+    font-size: 1.1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.check-item input:checked + .checkmark + .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-decoration: none;
+    display: inline-block;
+}
+
+#reset-btn {
+    background: #6c757d;
+    color: white;
+}
+
+#reset-btn:hover {
+    background: #545b62;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.back-btn {
+    background: #28a745;
+    color: white;
+}
+
+.back-btn:hover {
+    background: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(40,167,69,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .checklist-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .actions {
+        flex-direction: column;
+    }
+    
+    .checklist {
+        padding: 1.5rem;
+    }
+}

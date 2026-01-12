@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive World Map - Climate Risk</title>
+    <link rel="stylesheet" href="view.css">
+</head>
+<body>
+    <div class="map-page">
+        <header>
+            <h1>🌍 Global Climate Risk Map</h1>
+            <p>Hover continents to see climate vulnerability levels</p>
+        </header>
+
+        <div class="map-container">
+            <!-- Legend -->
+            <div class="map-legend">
+                <h3>Risk Levels</h3>
+                <div class="legend-item low">
+                    <span></span>
+                    <div>
+                        <strong>Low Risk</strong>
+                        <small>Good adaptation</small>
+                    </div>
+                </div>
+                <div class="legend-item medium">
+                    <span></span>
+                    <div>
+                        <strong>Medium Risk</strong>
+                        <small>Moderate threat</small>
+                    </div>
+                </div>
+                <div class="legend-item high">
+                    <span></span>
+                    <div>
+                        <strong>High Risk</strong>
+                        <small>Urgent action</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive SVG Map -->
+            <div class="map-wrapper">
+                <svg class="world-map" viewBox="0 0 900 500">
+                    <!-- Asia - LOW RISK -->
+                    <g class="country low" data-info="Asia: Low climate risk">
+                        <path d="M120 180 Q160 150 200 170 T240 160 Q280 150 320 170 L340 220 L300 230 Z"/>
+                        <path d="M350 190 Q380 170 410 190 T450 180 Q480 170 500 190 L520 230 Z"/>
+                    </g>
+
+                    <!-- Europe - MEDIUM RISK -->
+                    <g class="country medium" data-info="Europe: Medium climate risk">
+                        <path d="M450 80 Q490 60 530 80 T570 

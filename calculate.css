@@ -1,0 +1,227 @@
+/* Carbon Footprint Calculator Styles */
+.calculator-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+}
+
+.calculator-page header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.calculator-page h1 {
+    font-size: 2.8rem;
+    color: #2c5f2d;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-page header p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.calc-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.calc-section {
+    margin-bottom: 2.5rem;
+}
+
+.calc-section label {
+    display: block;
+    font-weight: bold;
+    color: #2c5f2d;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.calc-slider {
+    flex: 1;
+    height: 8px;
+    border-radius: 5px;
+    background: #e8f5e8;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.calc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #28a745, #20c997);
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(40,167,69,0.4);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.calc-slider:hover::-webkit-slider-thumb {
+    transform: scale(1.2);
+    box-shadow: 0 8px 25px rgba(40,167,69,0.6);
+}
+
+.slider-value {
+    font-weight: bold;
+    color: #28a745;
+    min-width: 80px;
+    font-size: 1rem;
+}
+
+.co2-impact {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Results Section */
+.results-section {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.total-result {
+    margin-bottom: 2.5rem;
+}
+
+.big-number {
+    font-size: 4rem;
+    background: linear-gradient(45deg, #28a745, #20c997);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+.big-number:hover {
+    transform: scale(1.05);
+}
+
+.progress-container {
+    margin-bottom: 2.5rem;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.progress-label span {
+    color: #2c5f2d;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #e8f5e8;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    width: 75%;
+    border-radius: 12px;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 0 20px rgba(40,167,69,0.4);
+}
+
+.progress-text {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Quick Tips */
+.quick-tips {
+    margin-top: 3rem;
+}
+
+.quick-tips h3 {
+    color: #2c5f2d;
+    margin-bottom: 1.5rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.tip {
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #28a745;
+}
+
+.tip:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(40,167,69,0.2);
+    background: white;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    background: #6c757d;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin: 2rem auto;
+    display: block;
+    width: fit-content;
+}
+
+.back-btn:hover {
+    background: #545b62;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .calculator-page {
+        padding: 1rem;
+    }
+    
+    .calc-container,
+    .results-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .big-number {
+        font-size: 3rem;
+    }
+    
+    .slider-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

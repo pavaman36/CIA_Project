@@ -1,0 +1,241 @@
+/* Interactive World Map Styles */
+.map-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+}
+
+.map-page header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.map-page h1 {
+    font-size: 2.8rem;
+    color: #2c5f2d;
+    margin-bottom: 0.5rem;
+}
+
+.map-page header p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+/* Main Container */
+.map-container {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Legend */
+.map-legend {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.map-legend h3 {
+    color: #2c5f2d;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.legend-item:hover {
+    transform: translateX(10px);
+    background: #e8f5e8;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.legend-item span {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.legend-item.low span { background: #d4edda; }
+.legend-item.medium span { background: #fff3cd; }
+.legend-item.high span { background: #f8d7da; }
+
+.legend-item div strong {
+    color: #2c5f2d;
+    display: block;
+}
+
+.legend-item div small {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Map Wrapper */
+.map-wrapper {
+    background: white;
+    border-radius: 25px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+}
+
+.map-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+.world-map {
+    width: 100%;
+    height: 450px;
+    cursor: crosshair;
+    display: block;
+}
+
+/* Country Styles */
+.country {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.country:hover {
+    transform: scale(1.2) translateY(-15px) !important;
+}
+
+.country path {
+    stroke: rgba(255,255,255,0.9);
+    stroke-width: 2;
+    stroke-linejoin: round;
+    transition: all 0.4s ease;
+}
+
+.country.low path { fill: #d4edda; }
+.country.medium path { fill: #fff3cd; }
+.country.high path { fill: #f8d7da; }
+
+.country:hover path {
+    fill: rgba(255,255,255,1) !important;
+    stroke: #28a745 !important;
+    stroke-width: 4 !important;
+    filter: drop-shadow(0 8px 25px rgba(40,167,69,0.6));
+}
+
+/* Info Panel */
+.map-info {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border-left: 6px solid #28a745;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+}
+
+.map-info:hover {
+    transform: translateX(10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.map-info h3 {
+    color: #2c5f2d;
+    margin-bottom: 1.5rem;
+}
+
+.map-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.map-info li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.map-info li:hover {
+    color: #28a745;
+    transform: translateX(5px);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.stats div {
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stats div:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.stats strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #28a745;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    background: #6c757d;
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    margin: 2rem auto;
+    display: block;
+    width: fit-content;
+}
+
+.back-btn:hover {
+    background: #545b62;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .map-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-page {
+        padding: 1rem;
+    }
+    
+    .map-wrapper {
+        padding: 1.5rem;
+    }
+    
+    .world-map {
+        height: 350px;
+    }
+}

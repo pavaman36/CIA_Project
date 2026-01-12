@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="calculate.css">
+</head>
+<body>
+    <div class="calculator-page">
+        <header>
+            <h1>🧮 Carbon Footprint Calculator</h1>
+            <p>Measure your monthly CO₂ emissions</p>
+        </header>
+
+        <div class="calc-container">
+            <!-- Electricity -->
+            <div class="calc-section">
+                <label>⚡ Electricity Usage</label>
+                <div class="slider-container">
+                    <input type="range" class="calc-slider" min="0" max="1000" value="250">
+                    <span class="slider-value">250 kWh</span>
+                    <span class="co2-impact">~125 kg CO₂</span>
+                </div>
+            </div>
+
+            <!-- Fuel -->
+            <div class="calc-section">
+                <label>⛽ Fuel Consumption</label>
+                <div class="slider-container">
+                    <input type="range" class="calc-slider" min="0" max="200" value="40">
+                    <span class="slider-value">40 L</span>
+                    <span class="co2-impact">~92 kg CO₂</span>
+                </div>
+            </div>
+
+            <!-- Travel -->
+            <div class="calc-section">
+                <label>🚗 Weekly Travel</label>
+                <div class="slider-container">
+                    <input type="range" class="calc-slider" min="0" max="500" value="120">
+                    <span class="slider-value">120 km</span>
+                    <span class="co2-impact">~30 kg CO₂</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="results-section">
+            <div class="total-result">
+                <div class="big-number">247 kg</div>
+                <p>CO₂ per month</p>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>Your Impact</span>
+                    <span>Average: 200kg</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">Above Average</div>
+            </div>
+
+            <!-- Quick Tips -->
+            <div class="quick-tips">
+                <h3>💡 Quick Wins</h3>
+                <div class="tips-grid">
+                    <div class="tip">🔌 Switch to LED</div>
+                    <div class="tip">🚇 Use Metro</div>
+                    <div class="tip">🍽️ Veg meals</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 Daily Eco Checklist</title>
+    <link rel="stylesheet" href="tick.css">
+</head>
+<body>
+    <div class="checklist-container">
+        <header>
+            <h1>🌿 Daily Eco Checklist</h1>
+            <p>Complete 8+ tasks to become Eco Hero! 🏆</p>
+        </header>
+
+        <div class="progress-section">
+            <div class="progress-circle">
+                <span id="progress-count">0/13</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div id="hero-status">🌱 Start your day</div>
+        </div>
+
+        <div class="checklist">
+            <label class="check-item">
+                <input type="checkbox" data-task="1">
+                <span class="checkmark">☀️</span>
+                <span class="task-text">Unplug chargers</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="2">
+                <span class="checkmark">💡</span>
+                <span class="task-text">Natural light only</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="3">
+                <span class="checkmark">🍽️</span>
+                <span class="task-text">Vegetarian meal</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="4">
+                <span class="checkmark">🚫</span>
+                <span class="task-text">Skip plastic bag</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="5">
+                <span class="checkmark">🚲</span>
+                <span class="task-text">Walk/bike <5km</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="6">
+                <span class="checkmark">🚌</span>
+                <span class="task-text">Public transport</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="7">
+                <span class="checkmark">🔌</span>
+                <span class="task-text">5-min shower</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="8">
+                <span class="checkmark">♻️</span>
+                <span class="task-text">Waste segregation</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="9">
+                <span class="checkmark">💧</span>
+                <span class="task-text">Fix water drip</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="10">
+                <span class="checkmark">📱</span>
+                <span class="task-text">Digital receipts</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="11">
+                <span class="checkmark">🌱</span>
+                <span class="task-text">Water plants</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="12">
+                <span class="checkmark">🚗</span>
+                <span class="task-text">Carpool ride</span>
+            </label>
+
+            <label class="check-item">
+                <input type="checkbox" data-task="13">
+                <span class="checkmark">💤</span>
+                <span class="task-text">Early bedtime</span>
+            </label>
+        </div>
+
+        <div class="actions">
+            <button id="reset-btn" class="btn">🔄 Reset Day</button>
+            <a href="index.html" class="btn back-btn">🏠 Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript - Track checkboxes and update progress
+        const checkboxes = document.querySelectorAll('.check-item input[type="checkbox"]');
+        const progressCount = document.getElementById('progress-count');
+        const progressFill = document.getElementById('progress-fill');
+        const heroStatus = document.getElementById('hero-status');
+        const resetBtn = document.getElementById('reset-btn');
+
+        function updateProgress() {
+            const checked = document.querySelectorAll('.check-item input:checked').length;
+            const total = checkboxes.length;
+            
+            // Update counter
+            progressCount.textContent = `${checked}/${total}`;
+            
+            // Update progress bar
+            const percentage = (checked / total) * 100;
+            progressFill.style.width = percentage + '%';
+            
+            // Update hero status
+            if (checked >= 11) {
+                heroStatus.textContent = '🌴 ECO FOREST HERO! 🏆';
+                heroStatus.style.color = '#28a745';
+            } else if (checked >= 8) {
+                heroStatus.textContent = '🌳 ECO HERO! 🌟';
+                heroStatus.style.color = '#28a745';
+            } else if (checked >= 5) {
+                heroStatus.textContent = '🌿 Good Progress! 👍';
+                heroStatus.style.color = '#ffc107';
+            } else {
+                heroStatus.textContent = '🌱 Keep Going! 💪';
+                heroStatus.style.color = '#6c757d';
+            }
+        }
+
+        // Add event listeners to checkboxes
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateProgress);
+        });
+
+        // Reset button
+        resetBtn.addEventListener('click', () => {
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+            updateProgress();
+        });
+
+        // Initial load
+        updateProgress();
+    </script>
+</body>
+</html>
