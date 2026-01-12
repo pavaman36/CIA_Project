@@ -1,10 +1,35 @@
+:root{
+    --first: #0d0d12;
+    --second: #14145E;
+    --third: #290E4F;
+    --one:#eb5f13;
+    --two:#eb5f13;
+    --three:#422311;
+}
+
+body{
+    background-color: var(--first);
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg,var(--one),var(--two));
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: none;
+}
+
 /* Interactive World Map Styles */
 .map-page {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     min-height: 100vh;
-    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+    background: var(--first);
 }
 
 .map-page header {
@@ -14,7 +39,7 @@
 
 .map-page h1 {
     font-size: 2.8rem;
-    color: #2c5f2d;
+    color: white;
     margin-bottom: 0.5rem;
 }
 
@@ -41,7 +66,7 @@
 }
 
 .map-legend h3 {
-    color: #2c5f2d;
+    color: var(--first);
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -74,7 +99,7 @@
 .legend-item.high span { background: #f8d7da; }
 
 .legend-item div strong {
-    color: #2c5f2d;
+    color: var(--second);
     display: block;
 }
 

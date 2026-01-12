@@ -1,10 +1,23 @@
+:root{
+    --first: #0d0d12;
+    --second: #14145E;
+    --third: #290E4F;
+    --one:#eb5f13;
+    --two:#eb5f13;
+    --three:#422311;
+}
+
+body{
+    background-color: var(--first);
+}
+
 /* Daily Eco Checklist Styles */
 .checklist-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
     min-height: 100vh;
-    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+    background: whitesmoke;
 }
 
 .checklist-container header {
@@ -14,7 +27,7 @@
 
 .checklist-container h1 {
     font-size: 2.5rem;
-    color: #2c5f2d;
+    color: var(--first);
     margin-bottom: 0.5rem;
 }
 
@@ -32,7 +45,7 @@
 .progress-circle {
     width: 120px;
     height: 120px;
-    border: 6px solid #e8f5e8;
+    border: 6px solid var(--one);
     border-radius: 50%;
     margin: 0 auto 1.5rem;
     display: flex;
@@ -45,19 +58,19 @@
 
 .progress-circle:hover {
     transform: scale(1.05);
-    border-color: #28a745;
+    border-color: var(--second);
 }
 
 #progress-count {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #2c5f2d;
+    color: var(--first);
 }
 
 .progress-bar {
     width: 100%;
     height: 12px;
-    background: #e8f5e8;
+    background: white;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 1rem;
@@ -65,7 +78,7 @@
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #28a745, #20c997);
+    background: linear-gradient(90deg, var(--first), blue);
     width: 0%;
     border-radius: 10px;
     transition: width 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -123,15 +136,15 @@
 }
 
 .check-item input:checked + .checkmark {
-    background: linear-gradient(45deg, #28a745, #20c997);
-    border-color: #28a745;
+    background: linear-gradient(45deg, var(--second),blue);
+    border-color: var(--first);
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(40,167,69,0.4);
 }
 
 .task-text {
     font-size: 1.1rem;
-    color: #333;
+    color: var(--first);
     transition: all 0.3s ease;
 }
 
@@ -171,12 +184,12 @@
 }
 
 .back-btn {
-    background: #28a745;
+    background: var(--one);
     color: white;
 }
 
 .back-btn:hover {
-    background: #218838;
+    background: rgb(195, 79, 2);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(40,167,69,0.4);
 }
