@@ -193,7 +193,7 @@ body{
 
 .tip:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(40,167,69,0.2);
+    box-shadow: 0 10px 20px var(--second);
     background: white;
 }
 

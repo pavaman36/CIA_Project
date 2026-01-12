@@ -112,7 +112,7 @@ body{
 }
 
 .check-item:hover {
-    background: #f8f9fa;
+    background: rgb(246, 209, 181);
     transform: translateX(5px);
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
@@ -191,7 +191,7 @@ body{
 .back-btn:hover {
     background: rgb(195, 79, 2);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(40,167,69,0.4);
+    box-shadow: 0 10px 20px var(--first);
 }
 
 /* Responsive */

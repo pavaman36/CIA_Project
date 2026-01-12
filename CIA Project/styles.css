@@ -251,7 +251,7 @@ input, select {
 input:focus, select:focus {
     border-color: #0d0d12;
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(40,167,69,0.2);
+    box-shadow: 0 10px 20px var(--second);
     outline: none;
 }
 
