@@ -21,10 +21,13 @@ body{
     font-weight: bold;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     box-shadow: none;
+    height: fit-content;
 }
 
 /* Interactive World Map Styles */
 .map-page {
+    display: flex;
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
